@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!--
+<path d="M70 150 h 50 v 80 h -50 Z" fill="black" stroke="white"/>
+  <path d="M120 150 h 50 v 80 h -50 Z" fill="black" stroke="white"/>
+-->
 </head>
 <body>
 
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
 
   <path d="M70 0 h 100 v 10 h -100 Z" fill="black"/>
   <path d="M70 10 h 100 v 100 h -100 Z" fill="brown"/>
@@ -20,10 +24,24 @@
   <path d="M70 70 h -20 v 100 h 20 Z" fill="brown"/>
   <path d="M170 70 h 20 v 100 h -20 Z" fill="brown"/>
   
-
-  <path d="M70 150 h 50 v 80 h -50 Z" fill="black" stroke="white"/>
-  <path d="M120 150 h 50 v 80 h -50 Z" fill="black" stroke="white"/>
-
+  <rect x="70" y="150" width="50" height="80" fill="black" stroke="white">
+    <animate attributeType="XML" attributeName="x" 
+        from="60" to="70" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="120" y="150" width="50" height="80" fill="black" stroke="white">
+    <animate attributeType="XML" attributeName="x" 
+        from="115" to="120" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="115" cy="300" r="70" fill="none" 
+     style="stroke-dasharray: 2em" stroke="yellow" stroke-width="7">
+     <animateTransform attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 115 300"
+        to="360 115 300"
+        dur="3s"
+        repeatCount="indefinite"/>
+  </circle>
   <path d="M240 60 h 10 v 10 h -10 Z" fill="grey"/>
   <path d="M230 50 h 10 v 10 h -10 Z" fill="grey"/>
   <path d="M220 40 h 10 v 10 h -10 Z" fill="grey"/>
